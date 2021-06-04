@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500&family=Playfair+Display&display=swap");
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+nav {
+  padding: 20px;
+}
+
+html {
+}
+
+/* Task 1: Give
+
+- Bird photos 320px width
+- Author photos 40px width and height
+
+- About sections 20px padding
+- Buttons horizontal padding 16px and vertical padding 24px
+
+- Heading 32px font size and paragraph 16px font size
+
+Task 2: Give
+
+- Section `display: flex` and `align-items: center`
+
+- Bird photos and side section 50% width
+- Author photos 50% border radius
+
+Task 3: Give
+
+- Section 100vh height
+- Heading 5vw font size
+
+Task 4: Give
+
+- Heading 2rem font size and paragraph 1rem font size
+- Button 0.75rem font size and `1em 1.5em` padding 
+
+Task 5: Give 
+
+- Paragraph 50ch max width 
+*/
+
+.section {
+  /* default values */
+  background-color: #140d0b;
+  color: #fef6e4;
+
+  /* TASK 2 Updates (start) */
+  display: flex;
+  align-items: center; /* vertical axis alaignment */
+  /* TASK 2 Updates (end) */
+
+  /* TASK 3 Updates (start) */
+  /* sets section to have 100% viewing size, depending on browser size */
+  height: 100vh;
+  /* TASK 3 Updates (end) */
+}
+
+.bird-photo {
+  /* TASK 1 Updates (start) */
+  /* img is not distorted since only width was adjusted */
+  /* width: 320px; */
+  /* TASK 1 Updates (end) */
+
+  /* TASK 2 Updates (start) */
+  /* img size will now always take 50% of the parent <div> regardless of browser size */
+  width: 50%;
+  /* TASK 2 Updates (end) */
+
+  /* TASK 3 Updates (start) */
+  /* set height=100% to match parent element's height */
+  height: 100%;
+  /* removes img distortion and making it responsive */
+  object-fit: cover;
+  /* TASK 3 Updates (end) */
+}
+
+.side-section {
+  /* TASK 2 Updates (start) */
+  /* side sectoin size will now always take 50% of the parent <div> regardless of browser size */
+  width: 50%;
+  /* TASK 2 Updates (start) */
+}
+
+.about {
+  /* default values */
+  margin: 0 auto;
+  width: fit-content;
+
+  /* TASK 1 Updates (start) */
+  padding: 20px;
+  /* TASK 1 Updates (end) */
+}
+
+.author {
+  /* TASK 1 Updates (start) */
+  /* img became distored since it's not originally a square */
+  width: 40px;
+  height: 40px;
+
+  /* fixes distortion */
+  object-fit: cover;
+  /* TASK 1 Updates (end) */
+
+  /* TASK 1 Updates (start) */
+  /* "changes" img to have round borders, 50% makes a circle */
+  border-radius: 50%;
+  /* TASK 1 Updates (end) */
+}
+
+.about h2 {
+  /* default values */
+  font-family: "Playfair Display", serif;
+
+  /* TASK 1 Updates (start) */
+  /* font-size: 32px; */
+  /* TASK 1 Updates (end) */
+
+  /* TASK 3 Updates (start) */
+  /* font size changes based on browser size */
+  /* font-size: 5vw; */
+  /* TASK 3 Updates (end) */
+
+  /* TASK 4 Updates (start) 
+  - by default 1rem = 16px
+  - rem -> font size relative to ROOT element's font size
+  - changing browser's font size will affect rem value
+  */
+  /* font-size: 2rem; */
+
+  /* em -> font size relative to PARENT element */
+  font-size: 2em;
+  /* TASK 4 Updates (end) */
+}
+
+.about p {
+  /* TASK 1 Updates (start) */
+  /* font-size: 16px; */
+  /* TASK 1 Updates (end) */
+
+  /* TASK 4 Updates (start) */
+  /* font-size: 1rem; */
+
+  font-size: 1em;
+  /* TASK 4 Updates (end) */
+
+  /* TASK 5 Updates (start) */
+  /*
+  - ch value depends on "0" character length
+  - 50ch = 50 "0"s
+  - increasing font size will also increase "ch" value
+  */
+  max-width: 50ch;
+  /* TASK 5 Updates (end) */
+}
+
+.about button {
+  /* default values */
+  border: none;
+  background-color: #feb51c;
+  color: #140d0b;
+  font-weight: bold;
+
+  /* TASK 1 Updates (start) */
+  /* increases button size */
+  /* padding: 16px 24px; */
+  /* TASK 1 Updates (end) */
+
+  /* TASK 4 Updates (start) */
+  font-size: 0.75rem;
+
+  /* 
+  - padding value will change according to font-size 
+  - increasing font-size also increases padding
+  */
+  padding: 1em 1.5em;
+  /* TASK 4 Updates (end) */
+}
